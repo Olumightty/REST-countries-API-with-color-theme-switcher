@@ -1,0 +1,1 @@
+export const filterList = ["Africa", "America", "Asia", "Europe", "Oceonia"]
