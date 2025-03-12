@@ -18,7 +18,7 @@ const CountryCard = (props: CountryCardInfoProps | any) => {
         <div className='p-5 '>
             <p className='font-semibold'>{props.name}</p>
             <p className='mt-5 text-sm'>
-                <span className='block'><span className='font-semibold '>Population: </span> {props.population}</span>
+                <span className='block'><span className='font-semibold '>Population: </span> {props.population.toLocaleString()}</span>
                 <span className='block'><span className='font-semibold '>Region: </span>{props.region}</span>
                 <span className='block'><span className='font-semibold '>Capital: </span>{props.capital}</span>
             </p>

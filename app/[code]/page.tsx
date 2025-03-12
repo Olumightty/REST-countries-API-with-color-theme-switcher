@@ -32,7 +32,7 @@ const CountryDetailsPage = async({params}: {params: Promise<{code: string}>}) =>
               <div className='flex gap-30 mt-5'>
                 <div>
                   <p><span className='font-semibold'>Native Name:</span> {country.nativeName}</p>
-                  <p><span className='font-semibold'>Population:</span> {country.population}</p>
+                  <p><span className='font-semibold'>Population:</span> {country.population.toLocaleString()}</p>
                   <p><span className='font-semibold'>Region:</span> {country.region}</p>
                   <p><span className='font-semibold'>Sub Region:</span> {country.subregion}</p>
                   <p><span className='font-semibold'>Capital:</span> {country.capital}</p>
