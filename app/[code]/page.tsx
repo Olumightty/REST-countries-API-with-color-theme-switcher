@@ -11,7 +11,7 @@ const CountryDetailsPage = async({params}: {params: Promise<{code: string}>}) =>
   const {code} = await params
    const country = countries.find((country) => country.alpha3Code.toLowerCase() == code.toLowerCase())
    if(country) return (
-    <div className='p-20  w-full h-[100%]'>
+    <div className='p-10 lg:p-20  w-full h-[100%]'>
       <Link href={'/'}>
         <button
          className='cursor-pointer flex items-center gap-2 bg-(--light_mode_elements) dark:bg-(--dark_mode_elements) px-5 py-2 shadow-xs'>
@@ -20,7 +20,7 @@ const CountryDetailsPage = async({params}: {params: Promise<{code: string}>}) =>
         </button>      
       </Link>
 
-        <div className='flex gap-40 items-center py-20' >
+        <div className='flex flex-col lg:flex-row gap-20 xl:gap-40 items-center py-10 lg:py-20' >
             <Image
               width={600}
               height={400}

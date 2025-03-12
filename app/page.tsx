@@ -9,7 +9,7 @@ export default async function HomePage({searchParams}:{searchParams: Promise<{na
 
   return ( 
     <div className=" h-[100%] p-20 pt-10">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between">
         <SearchBar/>
         <Filter/>
       </div>
