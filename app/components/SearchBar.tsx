@@ -13,7 +13,7 @@ const SearchBar = () => {
     router.push(`?${params.toString()}`, { scroll: false });
   };
   return (
-    <div className='flex gap-5 items-center px-5 py-2 bg-white shadow-xs w-fit'>
+    <div className='flex gap-5 items-center px-5 py-2 bg-(--light_mode_elements) dark:bg-(--dark_mode_elements) shadow-xs w-fit'>
         <BiSearch size={27}/>
         <input onChange={(e) => setSearchParam(e.target.value)}  className='outline-none' type="text" placeholder="Search for a country" />
     </div>

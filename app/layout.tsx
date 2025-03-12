@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
+import Providers from "./providers";
 
 
 const nunitoSans = Nunito_Sans({
@@ -21,13 +22,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${nunitoSans.variable} antialiased`}
-      >
-        <NavBar/>
-        {children}
-      </body>
-    </html>
+    
+      <html suppressHydrationWarning className="dark" lang="en">
+        <body
+          className={`${nunitoSans.variable} antialiased bg-(--light_mode_background) dark:bg-(--dark_mode_background) text-(--light_mode_text) dark:text-(--dark_mode_text)`}
+        >
+          <Providers>
+            <NavBar/>
+            <div className="bg-(--light_mode_background) dark:bg-(--dark_mode_background) text-(--light_mode_text) dark:text-(--dark_mode_text)">
+              {children}
+            </div>
+            
+          </Providers>
+        </body>
+      </html>
+    
   );
 }

@@ -11,10 +11,10 @@ const CountryDetailsPage = async({params}: {params: Promise<{code: string}>}) =>
   const {code} = await params
    const country = countries.find((country) => country.alpha3Code.toLowerCase() == code.toLowerCase())
    if(country) return (
-    <div className='p-20 bg-gray-100 w-full h-[100%]'>
+    <div className='p-20  w-full h-[100%]'>
       <Link href={'/'}>
         <button
-         className='cursor-pointer flex items-center gap-2 bg-white px-5 py-2 shadow-xs'>
+         className='cursor-pointer flex items-center gap-2 bg-(--light_mode_elements) dark:bg-(--dark_mode_elements) px-5 py-2 shadow-xs'>
           <IoMdArrowBack />
           <p>Back</p>
         </button>      

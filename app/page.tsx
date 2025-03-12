@@ -8,7 +8,7 @@ export default async function HomePage({searchParams}:{searchParams: Promise<{na
   const {name, filter} = await searchParams
 
   return ( 
-    <div className="bg-gray-100 h-[100%] p-20 pt-10">
+    <div className=" h-[100%] p-20 pt-10">
       <div className="flex items-center justify-between">
         <SearchBar/>
         <Filter/>
