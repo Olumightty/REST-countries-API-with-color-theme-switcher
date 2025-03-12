@@ -8,11 +8,12 @@ const CountryCard = (props: CountryCardInfoProps | any) => {
     props as CountryCardInfoProps ?
     <div className='bg-(--light_mode_elements) dark:bg-(--dark_mode_elements) rounded-b-lg shadow-xs cursor-pointer hover:scale-105 ease-linear duration-300 w-fit'>
         <Image
-            className='rounded-t-lg w-[300px] h-[200px]'
+            className='rounded-t-lg w-[300px] h-[200px] '
             width={300}
             height={200}
             src={props.flags.svg}
             alt={props.name}
+            priority
         />
         <div className='p-5 '>
             <p className='font-semibold'>{props.name}</p>
