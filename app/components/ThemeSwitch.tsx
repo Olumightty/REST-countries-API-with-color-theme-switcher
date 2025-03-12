@@ -43,7 +43,7 @@ const ThemeSwitch = () => {
         return(
             <button onClick={() => setTheme('light')} className='flex gap-2 items-center cursor-pointer'>
                 <FiSun size={27} fill='white'/>
-                <span>Dark Mode </span> 
+                <span>Light Mode </span> 
             </button>
         )
     }
